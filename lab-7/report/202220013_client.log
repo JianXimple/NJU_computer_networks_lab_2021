@@ -1,0 +1,14 @@
+test_01_cache_missed_1 (testcases.test_all.TestAll) ... ok
+test_02_cache_hit_1 (testcases.test_all.TestAll) ... ok
+test_03_not_found (testcases.test_all.TestAll) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.240s
+
+OK
+
+[Request time] 733.89 ms
+
+[Request time] 2.42 ms
+
+[Request time] 730.99 ms

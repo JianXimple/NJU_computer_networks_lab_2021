@@ -1,0 +1,1114 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Task 2: IP Forwarding Table Lookup · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="make-arp-request.html" />
+    
+    
+    <link rel="prev" href="preparation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Computer Network Lab Manual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ch01/lab-1.html">
+            
+                <a href="../../ch01/lab-1.html">
+            
+                    
+                    Lab 1: Switchyard & Mininet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../ch01/prerequisites.html">
+            
+                <a href="../../ch01/prerequisites.html">
+            
+                    
+                    Task 1: Prerequisites
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../ch01/linux.html">
+            
+                <a href="../../ch01/linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../ch01/python.html">
+            
+                <a href="../../ch01/python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../ch01/git.html">
+            
+                <a href="../../ch01/git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../ch01/workflow.html">
+            
+                <a href="../../ch01/workflow.html">
+            
+                    
+                    Task 2: Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../ch01/vscode.html">
+            
+                <a href="../../ch01/vscode.html">
+            
+                    
+                    VS Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../ch01/mininet.html">
+            
+                <a href="../../ch01/mininet.html">
+            
+                    
+                    Mininet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../ch01/wireshark.html">
+            
+                <a href="../../ch01/wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../ch01/switchyard.html">
+            
+                <a href="../../ch01/switchyard.html">
+            
+                    
+                    Switchyard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../ch01/nju-gitlab.html">
+            
+                <a href="../../ch01/nju-gitlab.html">
+            
+                    
+                    Task 3: NJU GitLab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../ch01/modification.html">
+            
+                <a href="../../ch01/modification.html">
+            
+                    
+                    Task 4: Modification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../ch02/lab-2.html">
+            
+                <a href="../../ch02/lab-2.html">
+            
+                    
+                    Lab 2: Learning Switch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../ch02/preparation.html">
+            
+                <a href="../../ch02/preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../ch02/basic-switch.html">
+            
+                <a href="../../ch02/basic-switch.html">
+            
+                    
+                    Task 2: Basic Switch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../ch02/timeouts.html">
+            
+                <a href="../../ch02/timeouts.html">
+            
+                    
+                    Task 3: Timeouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../ch02/lru.html">
+            
+                <a href="../../ch02/lru.html">
+            
+                    
+                    Task 4: Least Recently Used
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../ch02/ltv.html">
+            
+                <a href="../../ch02/ltv.html">
+            
+                    
+                    Task 5: Least Traffic Volume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../ch02/faq.html">
+            
+                <a href="../../ch02/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ipv4-router.html">
+            
+                <a href="../ipv4-router.html">
+            
+                    
+                    Lab 3-5: IPv4 Router
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../subch01/lab-3.html">
+            
+                <a href="../subch01/lab-3.html">
+            
+                    
+                    Lab 3: Respond to ARP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../subch01/preparation.html">
+            
+                <a href="../subch01/preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../subch01/handle-arp-request.html">
+            
+                <a href="../subch01/handle-arp-request.html">
+            
+                    
+                    Task 2: Handle ARP Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../subch01/arp-table.html">
+            
+                <a href="../subch01/arp-table.html">
+            
+                    
+                    Task 3: Cached ARP Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="lab-4.html">
+            
+                <a href="lab-4.html">
+            
+                    
+                    Lab 4: Forwarding Packets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="preparation.html">
+            
+                <a href="preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.2" data-path="forwarding-table-lookup.html">
+            
+                <a href="forwarding-table-lookup.html">
+            
+                    
+                    Task 2: IP Forwarding Table Lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="make-arp-request.html">
+            
+                <a href="make-arp-request.html">
+            
+                    
+                    Task 3: Forwarding the Packet and ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../subch03/lab-5.html">
+            
+                <a href="../subch03/lab-5.html">
+            
+                    
+                    Lab 5: Respond to ICMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../subch03/preparation.html">
+            
+                <a href="../subch03/preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../subch03/respond-ICMP.html">
+            
+                <a href="../subch03/respond-ICMP.html">
+            
+                    
+                    Task 2: Responding to ICMP echo requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../subch03/generate-error-messages.html">
+            
+                <a href="../subch03/generate-error-messages.html">
+            
+                    
+                    Task 3: Generating ICMP error messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../subch03/faq.html">
+            
+                <a href="../subch03/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../ch04/lab-6.html">
+            
+                <a href="../../ch04/lab-6.html">
+            
+                    
+                    Lab 6: Reliable Communication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../ch04/preparation.html">
+            
+                <a href="../../ch04/preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../ch04/middlebox.html">
+            
+                <a href="../../ch04/middlebox.html">
+            
+                    
+                    Task 2: Middlebox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../ch04/blastee.html">
+            
+                <a href="../../ch04/blastee.html">
+            
+                    
+                    Task 3: Blastee
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../ch04/blaster.html">
+            
+                <a href="../../ch04/blaster.html">
+            
+                    
+                    Task 4: Blaster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../ch04/deploy.html">
+            
+                <a href="../../ch04/deploy.html">
+            
+                    
+                    Task 5: Running your code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../ch04/faq.html">
+            
+                <a href="../../ch04/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../ch05/lab-7.html">
+            
+                <a href="../../ch05/lab-7.html">
+            
+                    
+                    Lab 7: Firewall
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../ch05/preparation.html">
+            
+                <a href="../../ch05/preparation.html">
+            
+                    
+                    Task 1: Preparation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../ch05/firewall-rules.html">
+            
+                <a href="../../ch05/firewall-rules.html">
+            
+                    
+                    Task 2: Implement firewall rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../ch05/token-bucket.html">
+            
+                <a href="../../ch05/token-bucket.html">
+            
+                    
+                    Task 3: Implement the token bucket algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../ch05/impairment.html">
+            
+                <a href="../../ch05/impairment.html">
+            
+                    
+                    Task 4: Implement some other type of network impairment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../ch05/testing.html">
+            
+                <a href="../../ch05/testing.html">
+            
+                    
+                    Task 5: Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../appendix/appendix.html">
+            
+                <a href="../../../appendix/appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../appendix/environment-setup.html">
+            
+                <a href="../../../appendix/environment-setup.html">
+            
+                    
+                    Environment Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../appendix/about-this-repository.html">
+            
+                <a href="../../../appendix/about-this-repository.html">
+            
+                    
+                    About This Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Task 2: IP Forwarding Table Lookup</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="task-2-ip-forwarding-table-lookup"><a name="task-2-ip-forwarding-table-lookup" class="plugin-anchor" href="#task-2-ip-forwarding-table-lookup"><i class="fa fa-link" aria-hidden="true"></i></a>Task 2: IP Forwarding Table Lookup</h1>
+<h2 id="ip-forwarding-table-build-and-lookup"><a name="ip-forwarding-table-build-and-lookup" class="plugin-anchor" href="#ip-forwarding-table-build-and-lookup"><i class="fa fa-link" aria-hidden="true"></i></a>IP Forwarding Table Build and Lookup</h2>
+<p>One of the key tasks to accomplish for this project is to perform the
+fundamental thing that routers do: receive packets, match their
+destination addresses against a forwarding table, and forward them out
+the correct interface.</p>
+<h3 id="build-forwarding-table"><a name="build-forwarding-table" class="plugin-anchor" href="#build-forwarding-table"><i class="fa fa-link" aria-hidden="true"></i></a>Build Forwarding Table</h3>
+<p>You will need to implement some kind of forwarding table, with each
+entry containing the following:</p>
+<ol>
+<li>A network prefix (e.g., <code>149.43.0.0</code>),</li>
+<li>A network &quot;mask&quot; (e.g., <code>255.255.0.0</code>),</li>
+<li>The &quot;next hop&quot; IP address, if the destination network prefix is not
+for a directly attached network, and,</li>
+<li>The network interface name through which packets destined to the
+given network should be forwarded.</li>
+</ol>
+<p>You will need to build the forwarding table from two sources:</p>
+<ul>
+<li>the list of router interfaces you get through a call to the <code>net.interfaces()</code>
+(or <code>net.ports()</code>) method</li>
+<li>and by reading in the contents of a file
+named <code>forwarding_table.txt</code>.</li>
+</ul>
+<p>An example forwarding table file is found
+in the project directory, and is also recreated each time you either run
+the test scripts or run your router in Mininet. Your code can
+simply assume that a file named <code>forwarding_table.txt</code> exists in the
+current working directory.</p>
+<blockquote>
+<p>[!NOTE]
+Your forwarding table <em>may</em> be different for the test scenario and for Mininet to help
+ensure that your router behaves in a <em>general</em> way and isn&apos;t written just
+to handle a specific set of forwarding table entries</p>
+</blockquote>
+<p>Note that for each interface object in the list obtained from
+<code>net.interfaces()</code> (or, equivalently, <code>net.ports()</code>), the IP address
+assigned to the interface and the network mask are available (see the
+Switchyard documentation on getting information about <a href="https://shellqiqi.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference" target="_blank">interfaces/ports</a>).</p>
+<p>The file <code>forwarding_table.txt</code> can be assumed to exist in the same
+directory where your router is starting up (again, this file is produced
+by the Switchyard test scenario or by the Mininet startup script), and
+is structured such that each line contains 4 space-separated items: the
+network address, the subnet mask, the next hop address, and the
+interface through which packets should be forwarded. Here are some
+example lines:</p>
+<pre><code>172.16.0.0 255.255.255.0 192.168.1.2 router-eth0
+192.168.200.0 255.255.255.0 192.168.200.1 router-eth1
+</code></pre><p>In the first line, the network address is <code>172.16.0.0</code> and the subnet mask
+is <code>255.255.0.0</code>. The next hop IP address is
+<code>192.168.1.2</code>, and the interface through which to forward packets is named
+<code>router-eth0</code>.</p>
+<h3 id="match-destination-ip-addresses-against-forwarding-table"><a name="match-destination-ip-addresses-against-forwarding-table" class="plugin-anchor" href="#match-destination-ip-addresses-against-forwarding-table"><i class="fa fa-link" aria-hidden="true"></i></a>Match Destination IP Addresses against Forwarding Table</h3>
+<p>After you build the forwarding table (which should be done once, upon
+startup), destination addresses in IP packets received by the router
+should be matched against the forwarding table. Remember that in case of
+two items in the table matching, the longest prefix match should be
+used.</p>
+<p>Two special cases to consider:</p>
+<ol>
+<li>If there is no match in the table, just drop the packet. (We&apos;ll
+handle this better in a later stage of creating the router.)</li>
+<li>If packet is for the router itself (i.e., destination address is an
+address of one of the router&apos;s interfaces), also drop/ignore the
+packet. (We&apos;ll also handle this better at a later stage.)</li>
+</ol>
+<h2 id="coding"><a name="coding" class="plugin-anchor" href="#coding"><i class="fa fa-link" aria-hidden="true"></i></a>Coding</h2>
+<p>Your task is to implement the logic described above. The start file is named <code>lab_4/myrouter.py</code>.</p>
+<p>There are a couple functions and methods in the <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">Python 3&apos;s <code>ipaddress</code> library</a> (also available through Switchyard&apos;s IP address library) that
+are helpful for building forwarding table entries and/or for matching
+destination IP addresses against forwarding table entries:</p>
+<ul>
+<li><p>To find out the length of a subnet prefix, you can use the following
+code pattern:</p>
+<pre><code>from switchyard.lib.address import *
+netaddr = IPv4Network(&apos;172.16.0.0/255.255.255.0&apos;)
+netaddr.prefixlen # -&gt; 24
+</code></pre></li>
+</ul>
+<p>Note in the code above that you simply need to concatenate an IP address
+with &apos;/&apos; and the netmask when constructing a <code>IPv4Network</code> object. The
+resulting object can tell you the length of the prefix in bits, which
+will be quite helpful.</p>
+<ul>
+<li><p>The <code>IPv4Address</code> class can be converted to an integer using the
+standard <code>int()</code> type conversion function. This function will return
+the 32-bit unsigned integer representation of an IP address.
+Remember that you can use bit-wise operations on Python integers
+(<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>~</code> is bitwise NOT, <code>^</code> is
+bitwise XOR). For example, if we wanted to check whether a given
+address matches a prefix, we might do something like this:</p>
+<pre><code>prefix = IPv4Address(&apos;172.16.0.0&apos;)
+destaddr = IPv4Address(&apos;172.16.23.55&apos;)
+matches = (int(prefix) &amp; int(destaddr)) == int(prefix)
+# matches -&gt; True
+</code></pre></li>
+</ul>
+<p>You can also use capabilities in the <code>IPv4Network</code> class to do the same thing:</p>
+<pre><code>prefixnet = IPv4Network(&apos;172.16.0.0/16&apos;)
+# same as IPv4Network(&apos;172.16.0.0/255.255.0.0&apos;)
+matches = destaddr in prefixnet
+# matches -&gt; True
+</code></pre><p>&#x2705; In the report, show how you implement the logic of building IP forwarding table and matching the destination IP addresses.</p>
+<h2 id="testing"><a name="testing" class="plugin-anchor" href="#testing"><i class="fa fa-link" aria-hidden="true"></i></a>Testing</h2>
+<p>As the function has not been fully implemented, there is no test cases can check the output of your router.</p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="preparation.html" class="navigation navigation-prev " aria-label="Previous page: Task 1: Preparation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="make-arp-request.html" class="navigation navigation-next " aria-label="Next page: Task 3: Forwarding the Packet and ARP">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Task 2: IP Forwarding Table Lookup","level":"1.4.2.2","depth":3,"next":{"title":"Task 3: Forwarding the Packet and ARP","level":"1.4.2.3","depth":3,"path":"content/ch03/subch02/make-arp-request.md","ref":"content/ch03/subch02/make-arp-request.md","articles":[]},"previous":{"title":"Task 1: Preparation","level":"1.4.2.1","depth":3,"path":"content/ch03/subch02/preparation.md","ref":"content/ch03/subch02/preparation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","back-to-top-button","-lunr","-search","search-pro","github","splitter","flexible-alerts","page-toc-button","auto-scroll-table","popup","anchors"],"pluginsConfig":{"styles":{"website":"styles/website.css"},"github":{"url":"https://github.com/shellqiqi/nju-network-experiments"},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/ch03/subch02/forwarding-table-lookup.md","mtime":"2020-04-29T06:16:11.006Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T13:08:23.732Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
